@@ -1,10 +1,118 @@
+@font-face{
+    font-family: myFont1;
+    src: url(Resources/Warmesty.ttf);
+}
+
+@font-face{
+    font-family: myFont2;
+    src: url(Resources/Dear\ Sunshine.ttf);
+}
+
+@font-face{
+    font-family: myFont3;
+    src: url(Resources/NixieOne.ttf);
+}
+
+@font-face{
+    font-family: myFont4;
+    src: url(Resources/WigendaTypewrite.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
 }
 
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(253, 190, 190);
+    color: black;
+    position: fixed;
+    width: 100%;
+    font-family: myFont3;
+}
+
+.navlinks ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navlinks li{
+    list-style: none;
+}
+
+.navlinks li a{
+    text-decoration: none;
+    color: rgb(62, 78, 150);
+    padding:1rem;
+    display: block;
+}
+
+.navlinks li a:hover{
+    color: white;
+}
+
+.prof-title{
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    color: rgb(62, 78, 150);
+}
+
+.togglebut{
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.togglebut .bar{
+    height: 4px;
+    width: 95%;
+    background-color: rgba(88, 110, 206, 0.616);
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .togglebut{
+        display: flex;
+    }
+
+    .navlinks{
+        display: none;
+        width:100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navlinks ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navlinks li{
+        text-align: center;
+    }
+
+    .navlinks li a{
+        padding: 0.5rem 1rem;
+    }
+
+    .navlinks.active{
+        display: flex;
+    }
+}
 .summary{
-    background-image: url(Images/1261630.jpg);
+    background-image: url(Resources/1261630.jpg);
     justify-content: center;
     font-size: large;
     align-self: center;
@@ -14,18 +122,18 @@
 }
 
 .project{
-    background: linear-gradient(to bottom,rgba(90, 88, 247, 0.671),white);
+    padding: 4rem;
 }
 
-.skill{
-    background: linear-gradient(to top,rgba(119, 95, 207, 0.822),rgba(142, 114, 219, 0.658),white);
+.skills{
+    padding: 4rem;
 }
 
 h1{
     justify-content: center;
     display: flex;
     align-items: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: myFont1;
 }
 
 .name{
@@ -33,13 +141,14 @@ h1{
     font-size: 10vh;
     display: flex;
     align-items: center;
+    font-family: myFont2;
 }
 
 .ind{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom,white,rgba(230, 96, 163, 0.596));
+    background: linear-gradient(to bottom,white,rgb(253, 190, 190));
     margin: 50px;
     height: 350px;
     width: 400px;
@@ -56,11 +165,12 @@ h1{
 .contact{
     display: flex;
     height: 75vh;
+    color: black;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     font-size: x-large;
-    background: linear-gradient(to bottom,rgba(119, 95, 207, 0.822),rgba(142, 114, 219, 0.658),white);
+    background: linear-gradient(to right,rgb(62, 78, 150),white,rgb(253, 190, 190));
 }
 
 .tagline{
@@ -68,4 +178,10 @@ h1{
     font-size: 25px;
     display: flex;
     align-items: center;
+    text-align: center;
+    font-family: myFont3;
+}
+
+.details{
+    font-family: myFont4;
 }
